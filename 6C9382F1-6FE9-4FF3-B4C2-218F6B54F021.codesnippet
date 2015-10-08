@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)registerRefreshDataNotification
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleRefreshDataNotification:)
+                                                 name:KPNCRefreshDataNotification
+                                               object:nil];
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)removeRefreshDataNotification
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:KPNCRefreshDataNotification
+                                                  object:nil];
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)handleRefreshDataNotification:(NSNotification *)notification
+{
+    [self didStartLoadingNewObjects];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>6C9382F1-6FE9-4FF3-B4C2-218F6B54F021</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>My Code Snippet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
